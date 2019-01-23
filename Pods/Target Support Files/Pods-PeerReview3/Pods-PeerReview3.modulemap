@@ -1,0 +1,6 @@
+framework module Pods_PeerReview3 {
+  umbrella header "Pods-PeerReview3-umbrella.h"
+
+  export *
+  module * { export * }
+}

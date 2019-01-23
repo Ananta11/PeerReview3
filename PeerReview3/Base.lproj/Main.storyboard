@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,94 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter anount in US Dollars." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LER-3C-Anm">
+                                <rect key="frame" x="24" y="28" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ox-U5-xvm">
+                                <rect key="frame" x="24" y="66" width="343" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="Convert"/>
+                                <connections>
+                                    <action selector="Converting:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mp3-k0-WrQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rupees" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0m-08-GBV">
+                                <rect key="frame" x="24" y="134" width="300" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Euros" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xto-gk-BB9">
+                                <rect key="frame" x="24" y="178" width="300" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibg-ZK-SDz">
+                                <rect key="frame" x="24" y="222" width="300" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EhE-MV-vBX">
+                                <rect key="frame" x="332" y="222" width="19" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pcd-lT-upm">
+                                <rect key="frame" x="332" y="134" width="19" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Is1-QZ-oV9">
+                                <rect key="frame" x="332" y="178" width="19" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EhE-MV-vBX" firstAttribute="leading" secondItem="ibg-ZK-SDz" secondAttribute="trailing" constant="8" id="EDj-Mj-Qat"/>
+                            <constraint firstItem="Is1-QZ-oV9" firstAttribute="leading" secondItem="xto-gk-BB9" secondAttribute="trailing" constant="8" id="EOY-65-Hhs"/>
+                            <constraint firstItem="xto-gk-BB9" firstAttribute="top" secondItem="c0m-08-GBV" secondAttribute="bottom" constant="8" id="Emh-GD-A8S"/>
+                            <constraint firstItem="c0m-08-GBV" firstAttribute="top" secondItem="6ox-U5-xvm" secondAttribute="bottom" constant="8" id="JN1-7b-G8i"/>
+                            <constraint firstItem="ibg-ZK-SDz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="Jaa-JI-7g4"/>
+                            <constraint firstItem="LER-3C-Anm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="O84-67-0J0"/>
+                            <constraint firstItem="pcd-lT-upm" firstAttribute="top" secondItem="6ox-U5-xvm" secondAttribute="bottom" constant="8" id="Qba-ja-BXG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pcd-lT-upm" secondAttribute="trailing" constant="8" id="TUz-yM-Q6o"/>
+                            <constraint firstItem="6ox-U5-xvm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="UMd-Y6-FlD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EhE-MV-vBX" secondAttribute="trailing" constant="8" id="Vnk-ie-LJg"/>
+                            <constraint firstItem="LER-3C-Anm" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="8" id="cwf-Gy-SE6"/>
+                            <constraint firstItem="c0m-08-GBV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="g6D-Gc-Tt8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Is1-QZ-oV9" secondAttribute="trailing" constant="8" id="j6v-j8-p22"/>
+                            <constraint firstItem="6ox-U5-xvm" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="8" id="kgK-4y-SNK"/>
+                            <constraint firstItem="Is1-QZ-oV9" firstAttribute="top" secondItem="pcd-lT-upm" secondAttribute="bottom" constant="8" id="mk3-GU-68D"/>
+                            <constraint firstItem="xto-gk-BB9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="ncH-lV-9vi"/>
+                            <constraint firstItem="ibg-ZK-SDz" firstAttribute="top" secondItem="xto-gk-BB9" secondAttribute="bottom" constant="8" id="rbo-Ho-xeI"/>
+                            <constraint firstItem="pcd-lT-upm" firstAttribute="leading" secondItem="c0m-08-GBV" secondAttribute="trailing" constant="8" id="rxk-RR-hhg"/>
+                            <constraint firstItem="EhE-MV-vBX" firstAttribute="top" secondItem="Is1-QZ-oV9" secondAttribute="bottom" constant="8" id="th5-37-3U4"/>
+                            <constraint firstItem="LER-3C-Anm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="uzz-4j-KSR"/>
+                            <constraint firstItem="6ox-U5-xvm" firstAttribute="top" secondItem="LER-3C-Anm" secondAttribute="bottom" constant="8" id="xy6-dh-Omk"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ConvertButton" destination="6ox-U5-xvm" id="2w9-Zs-RlB"/>
+                        <outlet property="EuroOut" destination="Is1-QZ-oV9" id="JAN-bk-w8m"/>
+                        <outlet property="RupeeOut" destination="pcd-lT-upm" id="lYi-LK-nUE"/>
+                        <outlet property="USDIn" destination="LER-3C-Anm" id="NNs-pZ-CKZ"/>
+                        <outlet property="YenOut" destination="EhE-MV-vBX" id="c19-Zn-UdM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>
